@@ -52,6 +52,7 @@ jobs:
         git add .
         git commit -m "update new refresh_token" -a
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: actions/checkout@v2
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        lfs: true
+        token: ${{ secrets.GITHUB_TOKEN }}
